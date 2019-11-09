@@ -6,18 +6,9 @@ while(b > 0)
     end
     b = bitshift(b, -1);
     a = bitshift(a, 1);
-end
 
-while(product > 15)
-    temp = product;
-    count = -1;
-    temp = bitshift(temp, -4);
-    while(temp > 0)
-        temp = bitshift(temp, -1);
-        count = count + 1;
-    end
-    if(count >= 0)
-        product = bitxor(product, bitshift(19, count));
-    end
+if a > 15
+    a = bitxor(a, 19);
+end
 end
 end

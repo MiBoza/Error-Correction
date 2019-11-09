@@ -7,7 +7,7 @@ end
 
 A
 save('Koromaru', 'A');
-clear all
+%clear all
 
 %{
 load('Koromaru');
