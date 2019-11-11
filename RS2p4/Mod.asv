@@ -9,9 +9,7 @@ while(lx >= ly)
         continue
     end
     coefficient = Div(x(1), y(1));
-    temp = Scale(y, coefficient);
-    x(1:ly) = bitxor(x(1:ly), temp);
-    x(1) = [];
-    lx = lx - 1;
+    temp = coefficient*y;
+    
 end
 end
