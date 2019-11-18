@@ -1,5 +1,7 @@
-message = [5 0 7 1 4 2 0 4];
+message = [6 10 15 1 12 14 7 15];
 code = RSencode(message)
-Syndrome(code)
-Ncode = [4 code(2:12)]
-Syndrome(Ncode)
+Ncode = bitxor(code, [zeros(1, 10) 13 6])
+S = Syndrome(Ncode)
+[Loc, Mag] = eLocator(S)
+list = search(Loc)
+M = correct(Ncode, Mag, Loc, list)

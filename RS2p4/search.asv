@@ -1,0 +1,10 @@
+function [list] = search(Loc)
+index = 1;
+for i = 1:12
+    if polyEval(Loc, pow(mod(-i, 15)+1)) == 0
+        list(index) = i;
+        index = index + 1;
+    end
+end
+end
+
