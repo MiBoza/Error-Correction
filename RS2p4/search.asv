@@ -1,8 +1,9 @@
 function [list] = search(Loc)
 index = 1;
-for i = 1:12
-    if polyEval(Loc, pow(mod(-i, 15)+1)) == 0
-        list(index) = i;
+load('Koromaru');
+for i = 1:15
+    if polyEval(Loc, i) == 0
+        list(index) = mod(-Log(i), 15)+1;
         index = index + 1;
     end
 end

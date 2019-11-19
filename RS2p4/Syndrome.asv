@@ -1,7 +1,0 @@
-function [syn] = Syndrome(code)
-load('Koromaru');
-syn = zeros(1, 4);
-for i = :5
-    syn(7-i) = polyEval(code, pow(i-1));
-end
-
