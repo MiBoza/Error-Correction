@@ -12,4 +12,4 @@ x1=ruido1;
 in = 1:100;
 plot(in, x(1:100),in, x1(1:100));
 y=num2hex(x1(1:100));
-sound(x1,fs)
+%sound(x1,fs)
